@@ -1,0 +1,114 @@
+/* layout.css
+ * Structure only: skip link, container, sections, header and footer shells.
+ */
+
+.skip-link {
+  position: absolute;
+  left: var(--gutter);
+  top: -4rem;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  background: var(--saffron);
+  color: var(--ink);
+  font-weight: 600;
+  border-radius: var(--radius);
+}
+
+.skip-link:focus {
+  top: 0.75rem;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  padding-block: clamp(4rem, 9vw, 7.5rem);
+}
+
+.section--tint {
+  background: var(--paper-deep);
+}
+
+.section--indigo {
+  background: var(--indigo);
+  color: var(--on-indigo);
+}
+
+.section-head {
+  max-width: 42rem;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.section-head__title {
+  font-size: var(--text-2xl);
+}
+
+.section-head__text {
+  margin-top: 1.25rem;
+  color: var(--muted);
+  font-size: var(--text-lg);
+  max-width: 36rem;
+}
+
+/* Header */
+
+.site-header {
+  position: relative;
+  z-index: 20;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: var(--max-width);
+  min-height: 4.5rem;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* Footer */
+
+.site-footer {
+  background: var(--ink);
+  color: var(--on-indigo);
+  padding-block: clamp(3.5rem, 7vw, 5.5rem) 2rem;
+}
+
+.site-footer__inner {
+  display: grid;
+  gap: 3rem;
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.site-footer__nav {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.5rem 1.5rem;
+}
+
+@media (min-width: 56rem) {
+  .site-footer__inner {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    column-gap: 4rem;
+  }
+
+  .site-footer__nav {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .site-footer__copyright {
+    grid-column: 1 / -1;
+  }
+}
