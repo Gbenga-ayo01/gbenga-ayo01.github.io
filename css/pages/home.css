@@ -62,7 +62,11 @@
   padding-bottom: 0.75rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  scrollbar-width: thin;
+  scrollbar-width: none;
+}
+
+.hero-gallery::-webkit-scrollbar {
+  display: none;
 }
 
 .hero-gallery__item {
@@ -227,12 +231,12 @@
 }
 
 .service-list {
-  border-bottom: 1px solid #c3cade;
+  border-bottom: 1px solid #d5c9b0;
 }
 
 .service {
   padding-block: 2rem 2.25rem;
-  border-top: 1px solid #c3cade;
+  border-top: 1px solid #d5c9b0;
 }
 
 .service__name {
