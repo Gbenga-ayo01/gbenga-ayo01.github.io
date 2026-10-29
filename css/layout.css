@@ -32,6 +32,11 @@
   background: var(--paper-deep);
 }
 
+.section--indigo {
+  background: var(--accent);
+  color: var(--on-dark);
+}
+
 /* Header */
 
 .site-header {
