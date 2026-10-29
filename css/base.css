@@ -12,7 +12,9 @@
 :root {
   /* Colour */
   --paper: #fafaf8;
-  --paper-deep: #f0f0ec;
+  --paper-deep: #e8ecf4;
+  --shot: #dbe2f0;
+  --saffron: #edb440;
   --ink: #101114;
   --muted: #5b5f69;
   --line: #d8d9d4;
