@@ -1,6 +1,6 @@
 /* base.css
  * Reset, design tokens, base typography. No component or layout selectors.
- * Fonts: Bricolage Grotesque (headings), Public Sans (body), loaded from Google Fonts in each page head.
+ * Fonts: Newsreader (display serif), Hanken Grotesk (body), loaded from Google Fonts in each page head.
  */
 
 *,
@@ -11,33 +11,32 @@
 
 :root {
   /* Colour */
-  --paper: #f3f4f1;
-  --paper-deep: #e6e9e4;
-  --ink: #121a2b;
-  --muted: #4f5a72;
-  --line: #c9cfd6;
-  --indigo: #1b2a4e;
-  --indigo-soft: #2a3f72;
-  --on-indigo: #eef1f7;
-  --on-indigo-muted: #b4bdd3;
-  --saffron: #edb440;
+  --paper: #fafaf8;
+  --paper-deep: #f0f0ec;
+  --ink: #101114;
+  --muted: #5b5f69;
+  --line: #d8d9d4;
+  --accent: #1b2a4e;
+  --accent-soft: #2a3f72;
+  --on-dark: #eef0f4;
+  --on-dark-muted: #a9afbd;
   --todo-bg: #fff3c4;
 
   /* Type */
-  --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
-  --font-body: "Public Sans", "Segoe UI", system-ui, sans-serif;
+  --font-display: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --font-body: "Hanken Grotesk", "Segoe UI", system-ui, sans-serif;
 
   --text-sm: clamp(0.875rem, 0.85rem + 0.1vw, 0.9375rem);
   --text-base: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
   --text-lg: clamp(1.125rem, 1.05rem + 0.35vw, 1.3125rem);
-  --text-xl: clamp(1.375rem, 1.2rem + 0.8vw, 1.75rem);
-  --text-2xl: clamp(1.875rem, 1.35rem + 2.4vw, 3.125rem);
-  --text-hero: clamp(2.375rem, 1.5rem + 4.4vw, 4.5rem);
+  --text-xl: clamp(1.5rem, 1.25rem + 1.1vw, 2.125rem);
+  --text-2xl: clamp(2.25rem, 1.4rem + 3.6vw, 4.25rem);
+  --text-hero: clamp(2.875rem, 1.2rem + 6.4vw, 6.75rem);
 
   /* Space and shape */
   --gutter: clamp(1.25rem, 4vw, 3rem);
-  --max-width: 75rem;
-  --radius: 4px;
+  --max-width: 78rem;
+  --radius: 2px;
 }
 
 html {
@@ -51,7 +50,7 @@ body {
   color: var(--ink);
   font-family: var(--font-body);
   font-size: var(--text-base);
-  line-height: 1.6;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -61,9 +60,9 @@ h3,
 h4 {
   margin: 0;
   font-family: var(--font-display);
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -0.015em;
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: -0.02em;
 }
 
 p,
@@ -100,7 +99,7 @@ textarea {
 }
 
 :focus-visible {
-  outline: 3px solid var(--saffron);
+  outline: 3px solid var(--accent-soft);
   outline-offset: 3px;
 }
 
