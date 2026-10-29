@@ -22,9 +22,11 @@
 }
 
 .hero__text {
-  max-width: 34rem;
-  font-size: var(--text-lg);
-  color: var(--muted);
+  max-width: 20em;
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  line-height: 1.25;
+  letter-spacing: -0.015em;
 }
 
 .hero__actions {
@@ -156,8 +158,9 @@
 
 .work-row__num {
   font-size: var(--text-sm);
+  font-weight: 600;
   font-variant-numeric: tabular-nums;
-  color: var(--muted);
+  color: var(--accent);
 }
 
 .work-row__name {
@@ -224,12 +227,12 @@
 }
 
 .service-list {
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid #c3cade;
 }
 
 .service {
   padding-block: 2rem 2.25rem;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid #c3cade;
 }
 
 .service__name {
@@ -301,6 +304,32 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     column-gap: 2.5rem;
   }
+}
+
+/* Approach on the indigo band */
+
+.section--indigo .approach__item {
+  border-top-color: rgba(255, 255, 255, 0.4);
+}
+
+.section--indigo .approach__desc {
+  color: var(--on-dark-muted);
+}
+
+.section--indigo .approach__foot {
+  color: var(--on-dark-muted);
+}
+
+.section--indigo .text-link {
+  color: var(--on-dark);
+}
+
+.section--indigo .text-link:hover {
+  color: var(--on-dark);
+}
+
+.section--indigo :focus-visible {
+  outline-color: var(--saffron);
 }
 
 /* About preview */
