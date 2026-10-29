@@ -19,7 +19,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/css/base.css">
   <link rel="stylesheet" href="/css/layout.css">
@@ -58,74 +58,90 @@
 <main id="main">
 
   <section class="hero" aria-labelledby="hero-title">
-    <div class="container hero__grid">
-      <div class="hero__copy">
-        <h1 class="hero__title" id="hero-title">Websites and online stores for Nigerian fashion brands and small businesses.</h1>
+    <div class="container">
+      <h1 class="hero__title" id="hero-title">Websites and online stores for Nigerian fashion brands and small businesses.</h1>
+
+      <div class="hero__bottom">
         <p class="hero__text">I design and build websites for clothing brands, boutiques, jewellery sellers and small retailers in Nigeria. My work includes storefronts, product pages, shopping carts, checkout features and custom website functionality.</p>
         <div class="hero__actions">
-          <a class="button button--saffron" href="/work/">View my work</a>
-          <a class="button button--outline-light" href="/contact/">Discuss your project</a>
+          <a class="button button--solid" href="/work/">View my work</a>
+          <a class="button button--line" href="/contact/">Discuss your project</a>
         </div>
       </div>
-      <!-- Replace with: <img class="shot shot--on-indigo" src="/assets/images/hero-preview.jpg" alt="..." width="1600" height="1000"> -->
-      <div class="shot shot--on-indigo hero__shot" role="img" aria-label="Placeholder for a portfolio preview screenshot">Screenshot: G33by Designs portfolio preview</div>
+
+      <!-- Replace each .shot with: <img class="shot" src="/assets/images/NAME.jpg" alt="..." width="900" height="1200"> -->
+      <div class="hero-gallery">
+        <figure class="hero-gallery__item">
+          <div class="shot" role="img" aria-label="Placeholder for a Kross Wear screenshot">Screenshot: Kross Wear</div>
+          <figcaption class="hero-gallery__caption">
+            <span class="hero-gallery__name">Kross Wear</span>
+            <span class="hero-gallery__kind">Menswear storefront</span>
+          </figcaption>
+        </figure>
+        <figure class="hero-gallery__item">
+          <div class="shot" role="img" aria-label="Placeholder for an Abu Boutique screenshot">Screenshot: Abu Boutique</div>
+          <figcaption class="hero-gallery__caption">
+            <span class="hero-gallery__name">Abu Boutique</span>
+            <span class="hero-gallery__kind">Clothing boutique</span>
+          </figcaption>
+        </figure>
+        <figure class="hero-gallery__item">
+          <div class="shot" role="img" aria-label="Placeholder for a Milayo Jewelry screenshot">Screenshot: Milayo Jewelry</div>
+          <figcaption class="hero-gallery__caption">
+            <span class="hero-gallery__name">Milayo Jewelry</span>
+            <span class="hero-gallery__kind">Jewellery shopping page</span>
+          </figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 
   <section class="section" aria-labelledby="work-title">
     <div class="container">
-      <div class="section-head">
-        <h2 class="section-head__title" id="work-title">Selected work</h2>
-        <p class="section-head__text">Three projects covering fashion retail, boutique shopping and jewellery e-commerce, each with its own design and functionality.</p>
+      <div class="work-head">
+        <h2 class="work-head__title" id="work-title">Selected work</h2>
+        <p class="work-head__text">Three projects covering fashion retail, boutique shopping and jewellery e-commerce, each with its own design and functionality.</p>
       </div>
 
-      <div class="work-list">
-        <article class="work-item">
-          <div class="work-item__media">
-            <div class="shot" role="img" aria-label="Placeholder for a Kross Wear screenshot">Screenshot: Kross Wear home page</div>
+      <ol class="work-index">
+        <li class="work-row">
+          <span class="work-row__num">01</span>
+          <h3 class="work-row__name">Kross Wear</h3>
+          <div class="work-row__body">
+            <p class="work-row__kind">Menswear storefront</p>
+            <p class="work-row__text">I built a menswear storefront with a Supabase backend, an admin panel for managing the store, a custom SVG logo mark and a mobile navigation menu.</p>
+            <a class="text-link work-row__link" href="/work/kross-wear/">View Kross Wear case study</a>
           </div>
-          <div class="work-item__body">
-            <h3 class="work-item__name">Kross Wear</h3>
-            <p class="work-item__kind">Menswear storefront</p>
-            <p class="work-item__text">I built a menswear storefront with a Supabase backend, an admin panel for managing the store, a custom SVG logo mark and a mobile navigation menu.</p>
-            <a class="text-link work-item__link" href="/work/kross-wear/">View Kross Wear case study</a>
+        </li>
+        <li class="work-row">
+          <span class="work-row__num">02</span>
+          <h3 class="work-row__name">Abu Boutique</h3>
+          <div class="work-row__body">
+            <p class="work-row__kind">Men's and women's clothing, e-commerce</p>
+            <p class="work-row__text">I built an editorial-style clothing boutique website featuring mixed men's and women's fashion, a shopping cart and checkout with bank transfer payment.</p>
+            <a class="text-link work-row__link" href="/work/abu-boutique/">View Abu Boutique case study</a>
           </div>
-        </article>
+        </li>
+        <li class="work-row">
+          <span class="work-row__num">03</span>
+          <h3 class="work-row__name">Milayo Jewelry</h3>
+          <div class="work-row__body">
+            <p class="work-row__kind">Jewellery shopping page</p>
+            <p class="work-row__text">Tapping a product opens a pop-up with its description. Images load as visitors scroll, the page carries WhatsApp badges, and I made accessibility fixes throughout.</p>
+            <a class="text-link work-row__link" href="/work/milayo-jewelry/">View Milayo Jewelry case study</a>
+          </div>
+        </li>
+      </ol>
 
-        <article class="work-item work-item--flip">
-          <div class="work-item__media">
-            <div class="shot" role="img" aria-label="Placeholder for an Abu Boutique screenshot">Screenshot: Abu Boutique home page</div>
-          </div>
-          <div class="work-item__body">
-            <h3 class="work-item__name">Abu Boutique</h3>
-            <p class="work-item__kind">Men's and women's clothing, e-commerce</p>
-            <p class="work-item__text">I built an editorial-style clothing boutique website featuring mixed men's and women's fashion, a shopping cart and checkout with bank transfer payment.</p>
-            <a class="text-link work-item__link" href="/work/abu-boutique/">View Abu Boutique case study</a>
-          </div>
-        </article>
-
-        <article class="work-item">
-          <div class="work-item__media">
-            <div class="shot" role="img" aria-label="Placeholder for a Milayo Jewelry screenshot">Screenshot: Milayo Jewelry product page</div>
-          </div>
-          <div class="work-item__body">
-            <h3 class="work-item__name">Milayo Jewelry</h3>
-            <p class="work-item__kind">Jewellery shopping page</p>
-            <p class="work-item__text">Tapping a product opens a pop-up with its description. Images load as visitors scroll, the page carries WhatsApp badges, and I made accessibility fixes throughout.</p>
-            <a class="text-link work-item__link" href="/work/milayo-jewelry/">View Milayo Jewelry case study</a>
-          </div>
-        </article>
-      </div>
-
-      <p class="work-more"><a class="button button--solid" href="/work/">View all projects</a></p>
+      <p class="work-more"><a class="button button--line" href="/work/">View all projects</a></p>
     </div>
   </section>
 
   <section class="section section--tint" aria-labelledby="services-title">
-    <div class="container">
-      <div class="section-head">
-        <h2 class="section-head__title" id="services-title">What I can build for your business</h2>
-        <p class="section-head__text">I design and develop websites around your business goals, content and required functionality.</p>
+    <div class="container services">
+      <div class="services__head">
+        <h2 class="services__title" id="services-title">What I can build for your business</h2>
+        <p class="services__text">I design and develop websites around your business goals, content and required functionality.</p>
       </div>
 
       <div class="service-list">
@@ -149,34 +165,36 @@
   </section>
 
   <section class="section" aria-labelledby="approach-title">
-    <div class="container approach">
+    <div class="container">
       <h2 class="approach__title" id="approach-title">Different businesses need different websites.</h2>
-      <div>
-        <dl class="approach__list">
-          <div class="approach__row">
-            <dt class="approach__term">Clothing brand</dt>
-            <dd>A storefront that presents collections and makes products easy to browse.</dd>
-          </div>
-          <div class="approach__row">
-            <dt class="approach__term">Boutique</dt>
-            <dd>Product pages, a shopping cart and checkout suited to the store's ordering process.</dd>
-          </div>
-          <div class="approach__row">
-            <dt class="approach__term">Small retailer</dt>
-            <dd>A practical website that helps customers find products, prices and contact details.</dd>
-          </div>
-        </dl>
-        <p class="approach__note">I also make mobile usability part of the build, so visitors can use the website on their phones.</p>
-        <a class="text-link approach__link" href="/process/">Read about my process</a>
-      </div>
+
+      <dl class="approach__grid">
+        <div class="approach__item">
+          <dt class="approach__term">Clothing brand</dt>
+          <dd class="approach__desc">A storefront that presents collections and makes products easy to browse.</dd>
+        </div>
+        <div class="approach__item">
+          <dt class="approach__term">Boutique</dt>
+          <dd class="approach__desc">Product pages, a shopping cart and checkout suited to the store's ordering process.</dd>
+        </div>
+        <div class="approach__item">
+          <dt class="approach__term">Small retailer</dt>
+          <dd class="approach__desc">A practical website that helps customers find products, prices and contact details.</dd>
+        </div>
+      </dl>
+
+      <p class="approach__foot">I also make mobile usability part of the build, so visitors can use the website on their phones.</p>
+      <a class="text-link approach__link" href="/process/">Read about my process</a>
     </div>
   </section>
 
   <section class="section section--tint" aria-labelledby="about-title">
     <div class="container about">
-      <!-- Replace with: <img class="shot shot--portrait" src="/assets/images/portrait.jpg" alt="Portrait of ..." width="800" height="1000"> -->
-      <div class="shot shot--portrait" role="img" aria-label="Placeholder for a portrait photo">Portrait photo</div>
-      <div>
+      <div class="about__media">
+        <!-- Replace with: <img class="shot shot--portrait" src="/assets/images/portrait.jpg" alt="Portrait of ..." width="800" height="1000"> -->
+        <div class="shot shot--portrait" role="img" aria-label="Placeholder for a portrait photo">Portrait photo</div>
+      </div>
+      <div class="about__body">
         <h2 class="about__title" id="about-title">The person behind G33by Designs</h2>
         <p class="about__text">I'm a Nigeria-based freelance web developer and designer. My work includes storefronts, e-commerce features, front-end interfaces and website functionality for retail and fashion projects.</p>
         <div class="about__facts">
@@ -188,21 +206,24 @@
     </div>
   </section>
 
-  <section class="section section--indigo" aria-labelledby="enquiry-title">
-    <div class="container enquiry">
-      <div>
-        <h2 class="enquiry__title" id="enquiry-title">Have a website project in mind?</h2>
-        <p class="enquiry__text">What does your business sell, and what do you need your website to do? Tell me about your project so I can understand the requirements and discuss the next steps.</p>
-        <a class="button button--saffron enquiry__button" href="/contact/">Start a project</a>
-      </div>
-      <div class="enquiry__details">
-        <div>
-          <p class="enquiry__label">Email</p>
-          <p class="enquiry__value"><a href="mailto:[EMAIL]">[EMAIL]</a></p>
+  <section class="section" aria-labelledby="enquiry-title">
+    <div class="container">
+      <h2 class="enquiry__title" id="enquiry-title">Have a website project in mind?</h2>
+
+      <div class="enquiry__grid">
+        <div class="enquiry__intro">
+          <p class="enquiry__text">What does your business sell, and what do you need your website to do? Tell me about your project so I can understand the requirements and discuss the next steps.</p>
+          <a class="button button--solid enquiry__button" href="/contact/">Start a project</a>
         </div>
-        <div>
-          <p class="enquiry__label">WhatsApp</p>
-          <p class="enquiry__value"><a href="[WHATSAPP]">[WHATSAPP]</a></p>
+        <div class="enquiry__details">
+          <div>
+            <p class="enquiry__label">Email</p>
+            <p class="enquiry__value"><a href="mailto:[EMAIL]">[EMAIL]</a></p>
+          </div>
+          <div>
+            <p class="enquiry__label">WhatsApp</p>
+            <p class="enquiry__value"><a href="[WHATSAPP]">[WHATSAPP]</a></p>
+          </div>
         </div>
       </div>
     </div>
