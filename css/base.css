@@ -11,13 +11,13 @@
 
 :root {
   /* Colour */
-  --paper: #fafaf8;
-  --paper-deep: #e8ecf4;
-  --shot: #dbe2f0;
+  --paper: #f7f2e8;
+  --paper-deep: #eee6d6;
+  --shot: #e3d9c4;
   --saffron: #edb440;
   --ink: #101114;
-  --muted: #5b5f69;
-  --line: #d8d9d4;
+  --muted: #5a5648;
+  --line: #dcd2be;
   --accent: #1b2a4e;
   --accent-soft: #2a3f72;
   --on-dark: #eef0f4;
