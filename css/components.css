@@ -7,8 +7,8 @@
 
 .site-header__logo {
   font-family: var(--font-display);
-  font-size: 1.375rem;
-  font-weight: 700;
+  font-size: 1.625rem;
+  font-weight: 500;
   letter-spacing: -0.02em;
   text-decoration: none;
   color: var(--ink);
@@ -31,7 +31,7 @@
 .site-header__menu-icon::after {
   display: block;
   width: 1.25rem;
-  height: 2px;
+  height: 1.5px;
   background: var(--ink);
   transition: transform 0.2s ease, background-color 0.2s ease;
 }
@@ -88,8 +88,10 @@
 
 .site-nav__link {
   display: block;
-  padding: 0.8rem 0;
+  padding: 0.85rem 0;
+  font-size: var(--text-sm);
   font-weight: 500;
+  letter-spacing: 0.01em;
   text-decoration: none;
   color: var(--ink);
 }
@@ -97,33 +99,29 @@
 .site-nav__link:hover {
   text-decoration: underline;
   text-decoration-thickness: 1px;
-  text-underline-offset: 0.35em;
+  text-underline-offset: 0.45em;
 }
 
 .site-nav__link[aria-current="page"] {
   text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 0.35em;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.45em;
 }
 
 .site-nav__link--cta {
   margin-top: 0.75rem;
-  padding: 0.85rem 1.25rem;
+  padding: 0.9rem 1.25rem;
   text-align: center;
-  background: var(--indigo);
-  color: var(--on-indigo);
+  border: 1px solid var(--ink);
   border-radius: var(--radius);
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.site-nav__link--cta:hover {
-  background: var(--indigo-soft);
-  text-decoration: none;
-}
-
+.site-nav__link--cta:hover,
 .site-nav__link--cta[aria-current="page"] {
+  background: var(--ink);
+  color: var(--paper);
   text-decoration: none;
-  background: var(--indigo-soft);
 }
 
 @media (min-width: 52rem) {
@@ -136,7 +134,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 2.25rem;
+    gap: 2.5rem;
     padding: 0;
     background: transparent;
     border-bottom: 0;
@@ -148,79 +146,72 @@
 
   .site-nav__link--cta {
     margin-top: 0;
-    padding: 0.7rem 1.25rem;
+    padding: 0.7rem 1.4rem;
   }
 }
 
-/* Buttons */
+/* Buttons: square-edged */
 
 .button {
   display: inline-block;
-  padding: 0.95rem 1.6rem;
+  padding: 1.05rem 1.9rem;
+  font-size: var(--text-sm);
   font-weight: 600;
+  letter-spacing: 0.01em;
   line-height: 1.2;
   text-align: center;
   text-decoration: none;
-  border: 2px solid transparent;
+  border: 1px solid var(--ink);
   border-radius: var(--radius);
   cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .button--solid {
-  background: var(--indigo);
-  color: var(--on-indigo);
+  background: var(--ink);
+  color: var(--paper);
 }
 
 .button--solid:hover {
-  background: var(--indigo-soft);
+  background: var(--accent);
+  border-color: var(--accent);
 }
 
-.button--saffron {
-  background: var(--saffron);
+.button--line {
+  background: transparent;
   color: var(--ink);
 }
 
-.button--saffron:hover {
-  background: #f4c35e;
-}
-
-.button--outline-light {
-  border-color: var(--on-indigo-muted);
-  color: var(--on-indigo);
-}
-
-.button--outline-light:hover {
-  border-color: var(--on-indigo);
-  background: rgba(255, 255, 255, 0.08);
+.button--line:hover {
+  background: var(--ink);
+  color: var(--paper);
 }
 
 /* Text link */
 
 .text-link {
   font-weight: 600;
-  color: var(--indigo);
+  color: var(--ink);
   text-decoration: underline;
   text-decoration-thickness: 1px;
-  text-underline-offset: 0.3em;
-  transition: text-decoration-thickness 0.15s ease;
+  text-underline-offset: 0.35em;
+  transition: text-decoration-thickness 0.15s ease, color 0.15s ease;
 }
 
 .text-link:hover {
-  text-decoration-thickness: 3px;
+  color: var(--accent-soft);
+  text-decoration-thickness: 2px;
 }
 
-/* Screenshot placeholder. Replace with an <img> of the real screenshot. */
+/* Screenshot placeholder. Replace with an <img class="shot"> of the real screenshot. */
 
 .shot {
   display: grid;
   place-items: center;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 3 / 4;
   padding: 1rem;
-  background: var(--paper-deep);
-  border: 1px solid var(--line);
-  border-radius: 2px;
+  background: #e9e9e4;
   color: var(--muted);
   font-size: var(--text-sm);
   text-align: center;
@@ -228,12 +219,6 @@
 
 .shot--portrait {
   aspect-ratio: 4 / 5;
-}
-
-.shot--on-indigo {
-  background: var(--indigo-soft);
-  border-color: rgba(255, 255, 255, 0.2);
-  color: var(--on-indigo-muted);
 }
 
 img.shot {
@@ -257,14 +242,14 @@ img.shot {
 .site-footer__name {
   font-family: var(--font-display);
   font-size: var(--text-xl);
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: -0.02em;
 }
 
 .site-footer__tagline {
-  margin-top: 0.75rem;
+  margin-top: 0.9rem;
   max-width: 22rem;
-  color: var(--on-indigo-muted);
+  color: var(--on-dark-muted);
 }
 
 .site-footer__group {
@@ -275,21 +260,21 @@ img.shot {
 }
 
 .site-footer__heading {
-  margin-bottom: 0.6rem;
-  font-family: var(--font-display);
-  font-weight: 700;
-  color: var(--on-indigo);
+  margin-bottom: 0.75rem;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--on-dark);
 }
 
 .site-footer__group a {
   padding-block: 0.25rem;
-  color: var(--on-indigo-muted);
+  color: var(--on-dark-muted);
   text-decoration: none;
   overflow-wrap: anywhere;
 }
 
 .site-footer__group a:hover {
-  color: var(--on-indigo);
+  color: var(--on-dark);
   text-decoration: underline;
   text-underline-offset: 0.3em;
 }
@@ -297,7 +282,7 @@ img.shot {
 .site-footer__copyright {
   padding-top: 1.75rem;
   border-top: 1px solid rgba(255, 255, 255, 0.16);
-  color: var(--on-indigo-muted);
+  color: var(--on-dark-muted);
   font-size: var(--text-sm);
 }
 
